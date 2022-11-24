@@ -1,0 +1,34 @@
+
+  
+
+<form action="add_book" method="POST">
+
+  <input type="text" name="name" placeholder="name">
+  <input type="text" name="quality" placeholder="quality">
+  <input type="text" name="collection" placeholder="collection">
+  <input type="text" name="location" placeholder="location">
+  <button type="submit">
+    Guardar
+  </button>
+</form>
+
+<table>
+  <thead>
+    <tr>
+      <td>name</td>
+      <td>quality</td>
+      <td>collection</td>
+      <td>location</td>
+    </tr>
+  </thead>
+  <tbody>
+    {% for book in books %}
+      <tr>
+        <td>{{book[0]}}</td>
+        <td>{{book[1]}}</td>
+        <td>{{book[2]}}</td>
+        <td>{{book[3]}}</td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
